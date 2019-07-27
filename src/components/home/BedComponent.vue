@@ -3,7 +3,12 @@
     <x-table :cell-bordered="false">
       <thead>
       <tr>
-        <th colspan="2">住院实时监控</th>
+        <th colspan="2">
+          <span>
+            <img src="../../assets/hospital-bed.png" alt="" width="16">
+            住院实时监控
+          </span>
+        </th>
       </tr>
       </thead>
       <tbody>
@@ -32,6 +37,8 @@
       this.$http.get("/api/wardBed/info").then(({data}) => {
         this.list = data;
         this.canvasBed(data)
+      }).then(error => {
+      
       })
     },
     methods: {
