@@ -1,7 +1,9 @@
 <template>
   <div class="patient">
     <card v-on:click="onClick">
-      <div slot="header">
+      <div slot="header" >
+        <font-awesome-icon icon="clock"></font-awesome-icon>
+        <span class="title"></span>
       </div>
       <div slot="content">
       </div>

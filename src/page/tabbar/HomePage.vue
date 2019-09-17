@@ -7,9 +7,18 @@
     </div>
     
     <div class="box" v-for="(index,item) in list" v-bind:key="index">
-      <Card v-bind:header="{title:header}">
+      <Card>
+        <div slot="header" class="card-header">
+          <div class="male" v-if="index%2===0">
+            <font-awesome-icon icon="male" size="2x"></font-awesome-icon>
+          </div>
+          <div class="female" v-else>
+            <font-awesome-icon icon="female" size="2x"></font-awesome-icon>
+          </div>
+          <span>{{item}}</span>
+        </div>
         <div slot="content" class="card-padding">
-          <font-awesome-icon icon="square"></font-awesome-icon>
+          <font-awesome-icon icon="clock" style="color: lightblue"></font-awesome-icon>
           <p>hehe</p>
         </div>
       </Card>
@@ -56,6 +65,22 @@
   
   .header-box {
     min-height: 46px;
+  }
+  
+  .box {
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  
+  .card-header {
+    padding: 8px 8px 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  
+  .card-header:after {
+    border-bottom: 1px solid #E5E5E5;
   }
 
 </style>
