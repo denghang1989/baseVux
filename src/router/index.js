@@ -5,6 +5,7 @@ import HomePage from '@/page/tabbar/HomePage.vue';
 import BoardPage from '@/page/tabbar/BoardPage.vue';
 import CockpitPage from '@/page/tabbar/CockpitPage.vue';
 import PanelPage from '@/page/tabbar/PanelPage.vue';
+import BedData from '@/page/home/BedData.vue';
 
 Vue.use(Router);
 
@@ -14,6 +15,9 @@ const router = new Router({
       path: '/',
       name: 'MainPage',
       component: MainPage,
+      meta: {
+        keepAlive: true
+      },
       children: [
         {
           path: "/main/home",
@@ -32,6 +36,11 @@ const router = new Router({
           component: PanelPage
         }
       ]
+    },
+    {
+      path:"/BedData",
+      component:BedData,
+      name:"BedData"
     }
   ],
 });
