@@ -6,6 +6,7 @@ import BoardPage from '@/page/tabbar/BoardPage.vue';
 import CockpitPage from '@/page/tabbar/CockpitPage.vue';
 import PanelPage from '@/page/tabbar/PanelPage.vue';
 import BedData from '@/page/home/BedData.vue';
+import CptData from '@/page/home/CptData.vue';
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ const router = new Router({
       path:"/BedData",
       component:BedData,
       name:"BedData"
+    },
+    {
+      path:"/CptData",
+      component:CptData,
+      name:"CptData"
     }
   ],
 });

@@ -7,6 +7,7 @@ import store from './store'
 import lodash from "lodash"
 import FastClick from "fastclick";
 import {AjaxPlugin} from 'vux'
+import Echarts from 'echarts'
 
 import fontawesome from '@fortawesome/fontawesome'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
@@ -20,6 +21,7 @@ fontawesome.library.add(brands);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
+Vue.prototype.$echarts = Echarts;
 
 Vue.use(AjaxPlugin);
 FastClick.attach(document.body);

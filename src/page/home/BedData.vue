@@ -1,10 +1,8 @@
 <template>
   <div class="bed">
-    <img class="back" src="../../assets/node_modules_reactnavigation_src_views_assets_backicon.png" alt="">
     <main class="main">
-      <x-table>
-      
-      </x-table>
+      <x-table></x-table>
+      <div id="line" class="line"></div>
     </main>
   </div>
 </template>
@@ -17,9 +15,10 @@
     components: {XTable},
     methods: {
       getBedData() {
-        this.$http.get("").then(value => {
-          this.bedData = value
-        });
+        setTimeout(()=>{
+          let echart = this.$echarts.init(document.getElementById("line"));
+          echart.setOption(this.option);
+        },2000);
       }
     },
     
@@ -29,7 +28,25 @@
     
     data() {
       return {
-        bedData: {}
+        bedData: {},
+        option: {
+          title: {
+            text: 'ECharts demo'
+          },
+          tooltip: {},
+          legend: {
+            data: ['销量']
+          },
+          xAxis: {
+            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+          },
+          yAxis: {},
+          series: [{
+            name: '销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+          }]
+        }
       }
     },
   }
@@ -46,8 +63,12 @@
       margin-left: 16px;
     }
     
-    .main{
+    .main {
       min-height: 100%;
+    }
+    
+    .line {
+      height: 400px;
     }
   }
 </style>

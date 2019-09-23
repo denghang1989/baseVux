@@ -34,7 +34,7 @@
         header: "这是一个Card",
         list: [
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_bi.png"), title: "企业高管", link: "/BedData"},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_cpt.png"), title: "中层管理", link: ""},
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_cpt.png"), title: "中层管理", link: "/CptData"},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory1.png"), title: "业务分析", link: ""},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), title: "财务主题", link: ""},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory8.png"), title: "市场主题", link: ""},
