@@ -1,7 +1,7 @@
 <template>
   <div class="bed">
     <main class="main">
-      <x-table></x-table>
+      <bed-table></bed-table>
       <div id="line" class="line"></div>
     </main>
   </div>
@@ -9,10 +9,11 @@
 
 <script>
   import XTable from "vux/src/components/x-table/index";
+  import BedTable from "./BedTable";
   
   export default {
     name: "BedData",
-    components: {XTable},
+    components: {BedTable, XTable},
     methods: {
       getBedData() {
         setTimeout(()=>{
@@ -55,7 +56,7 @@
 <style scoped lang="less">
   .bed {
     padding: 0;
-    margin: 0;
+    margin: 5px 0;
     min-height: 100%;
     
     .back {
@@ -68,6 +69,7 @@
     }
     
     .line {
+      margin-top: 10px;
       height: 400px;
     }
   }
