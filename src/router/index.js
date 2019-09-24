@@ -7,6 +7,9 @@ import CockpitPage from '@/page/tabbar/CockpitPage.vue';
 import PanelPage from '@/page/tabbar/PanelPage.vue';
 import BedData from '@/page/home/BedData.vue';
 import CptData from '@/page/home/CptData.vue';
+import PieData from '@/page/home/PieData.vue';
+import ScatterData from '@/page/home/ScatterData.vue';
+import GaugeData from '@/page/home/GaugeData.vue';
 
 Vue.use(Router);
 
@@ -47,6 +50,21 @@ const router = new Router({
       path:"/CptData",
       component:CptData,
       name:"CptData"
+    },
+    {
+      path:"/PieData",
+      component:PieData,
+      name:"PieData"
+    },
+    {
+      path:"/ScatterData",
+      component:ScatterData,
+      name:"ScatterData"
+    },
+    {
+      path:"/GaugeData",
+      component:GaugeData,
+      name:"GaugeData"
     }
   ],
 });

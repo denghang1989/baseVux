@@ -14,7 +14,7 @@
     
     <main class="main">
       <Grid :cols="4">
-        <grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :label="item.title" :link="item.link" >
+        <grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :label="item.title" :link="item.link">
         </grid-item>
       </Grid>
     </main>
@@ -35,9 +35,9 @@
         list: [
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_bi.png"), title: "企业高管", link: "/BedData"},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_cpt.png"), title: "中层管理", link: "/CptData"},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory1.png"), title: "业务分析", link: ""},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), title: "财务主题", link: ""},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory8.png"), title: "市场主题", link: ""},
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory1.png"), title: "业务分析", link: "/PieData"},
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), title: "财务主题", link: "/ScatterData"},
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory8.png"), title: "市场主题", link: "/GaugeData"},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory3.png"), title: "人力资源", link: ""},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory9.png"), title: "报表展示", link: ""}
         ],
@@ -50,9 +50,30 @@
     
     methods: {
       getList(useId) {
-        this.$http.get()
+        this.$http.post("", {useId: useId}).then(value => {
+          if ((value.data === 200) && (Array.isArray(value.data))) {
+            this.list = value.data;
+          }
+        }, error => {
+        
+        })
+      },
+      
+      getBanner() {
+        this.$http.get("").then(value => {
+          if ((value.status === 200) && (Array.isArray(value.data))) {
+            this.banner = value.data;
+          }
+        }, error => {
+        
+        })
       }
     },
+    
+    mounted() {
+      this.getList("");
+      this.getBanner();
+    }
   }
 </script>
 
