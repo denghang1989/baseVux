@@ -10,6 +10,8 @@ import CptData from '@/page/home/CptData.vue';
 import PieData from '@/page/home/PieData.vue';
 import ScatterData from '@/page/home/ScatterData.vue';
 import GaugeData from '@/page/home/GaugeData.vue';
+import BedDataPage from '@/page/home/BedDataPage.vue';
+import OutPatientData from '@/page/home/OutPatientData.vue';
 
 Vue.use(Router);
 
@@ -65,6 +67,16 @@ const router = new Router({
       path:"/GaugeData",
       component:GaugeData,
       name:"GaugeData"
+    },
+    {
+      path:"/BedDataPage",
+      component:BedDataPage,
+      name:"BedDataPage"
+    },
+    {
+      path:"/OutPatientData",
+      component:OutPatientData,
+      name:"OutPatientData"
     }
   ],
 });

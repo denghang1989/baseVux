@@ -38,8 +38,8 @@
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory1.png"), title: "业务分析", link: "/PieData"},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), title: "财务主题", link: "/ScatterData"},
           {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory8.png"), title: "市场主题", link: "/GaugeData"},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory3.png"), title: "人力资源", link: ""},
-          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory9.png"), title: "报表展示", link: ""}
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory3.png"), title: "人力资源", link: "/BedDataPage"},
+          {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory9.png"), title: "报表展示", link: "/OutPatientData"}
         ],
         banner: [
           require("../../assets/public_platform_view_guide_image_pad_english_guideview01.png"),
