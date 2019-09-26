@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 import lodash from "lodash"
 import FastClick from "fastclick";
-import {AjaxPlugin} from 'vux'
+import {AjaxPlugin,AlertPlugin} from 'vux'
 import Echarts from 'echarts'
 
 import fontawesome from '@fortawesome/fontawesome'
@@ -24,6 +24,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.prototype.$echarts = Echarts;
 
 Vue.use(AjaxPlugin);
+Vue.use(AlertPlugin);
 FastClick.attach(document.body);
 Vue.config.productionTip = false;
 Vue.prototype.$lodash = lodash;
