@@ -12,6 +12,8 @@ import ScatterData from '@/page/home/ScatterData.vue';
 import GaugeData from '@/page/home/GaugeData.vue';
 import BedDataPage from '@/page/home/BedDataPage.vue';
 import OutPatientData from '@/page/home/OutPatientData.vue';
+import MenuPage from '@/page/home/MenuPage.vue';
+import CellPage from '@/page/home/CellPage.vue';
 
 Vue.use(Router);
 
@@ -77,6 +79,16 @@ const router = new Router({
       path:"/OutPatientData",
       component:OutPatientData,
       name:"OutPatientData"
+    },
+    {
+      path:"/MenuPage",
+      component:MenuPage,
+      name:"MenuPage"
+    },
+    {
+      path:"/CellPage",
+      component:CellPage,
+      name:"CellPage"
     }
   ],
 });
