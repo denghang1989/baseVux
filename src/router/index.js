@@ -14,6 +14,10 @@ import BedDataPage from '@/page/home/BedDataPage.vue';
 import OutPatientData from '@/page/home/OutPatientData.vue';
 import MenuPage from '@/page/home/MenuPage.vue';
 import CellPage from '@/page/home/CellPage.vue';
+import ButtonGroup from '@/page/home/ButtonGroup.vue';
+import OnePage from '@/components/date/OnePage.vue';
+import TwoPage from '@/components/date/TwoPage.vue';
+import ThreePage from '@/components/date/ThreePage.vue';
 
 Vue.use(Router);
 
@@ -89,6 +93,25 @@ const router = new Router({
       path:"/CellPage",
       component:CellPage,
       name:"CellPage"
+    },
+    {
+      path:"/ButtonGroup",
+      component:ButtonGroup,
+      name:"ButtonGroup",
+      children: [
+        {
+          path:"/ButtonGroup/OnePage",
+          component:OnePage
+        },
+        {
+          path:"/ButtonGroup/TwoPage",
+          component:TwoPage
+        },
+        {
+          path:"/ButtonGroup/ThreePage",
+          component:ThreePage
+        }
+      ]
     }
   ],
 });

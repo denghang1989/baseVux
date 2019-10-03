@@ -32,7 +32,7 @@
         menuList:
           [
             {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory1.png"), label: "企业管理", link: "/CellPage"},
-            {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), label: "中层管理人员", link: ""},
+            {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory2.png"), label: "中层管理人员", link: "/ButtonGroup"},
             {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory3.png"), label: "业务分析人员", link: ""},
             {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory4.png"), label: "行业化", link: ""},
             {icon: require("../../assets/public_base_assets_icons_fs_gradient_directory5.png"), label: "财务主题", link: ""},
